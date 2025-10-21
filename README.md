@@ -53,8 +53,7 @@ config.set("dfs.datanode.use.datanode.hostname", "true");
 error:
 Permission denied: user=dr.who, access=WRITE, inode="/":root:supergroup:drwxr-xr-x
 
-
-方式 3：直接開放 HDFS 根目錄寫入 (不建議生產用)
+直接開放 HDFS 根目錄寫入 (不建議生產用)
 
 如果只是測試，可以放寬 / 目錄的權限：
 docker exec -it namenode bash
