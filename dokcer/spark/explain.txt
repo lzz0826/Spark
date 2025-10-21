@@ -1,0 +1,166 @@
+
+
+# core-site.xml 配置
+CORE-SITE.XML_fs.default.name=hdfs://namenode  # HDFS 默認命名空間地址
+CORE-SITE.XML_fs.defaultFS=hdfs://namenode  # HDFS 默認文件系統
+CORE-SITE.XML_hadoop.http.staticuser.user=root  # 設置 HTTP 用戶為 root
+CORE-SITE.XML_hadoop.tmp.dir=/tmp/hadoop-root  # Hadoop 臨時目錄
+
+# hdfs-site.xml 配置
+HDFS-SITE.XML_dfs.namenode.rpc-address=namenode:8020  # NameNode RPC 服務器地址
+HDFS-SITE.XML_dfs.replication=2  # HDFS 副本因子（設置為 2 表示每個數據塊有兩個副本）
+
+# mapred-site.xml 配置
+MAPRED-SITE.XML_mapreduce.framework.name=yarn  # MapReduce 計算框架使用 YARN
+MAPRED-SITE.XML_yarn.app.mapreduce.am.env=HADOOP_MAPRED_HOME=${HADOOP_HOME}  # 設置 AM（Application Master）環境變量
+MAPRED-SITE.XML_mapreduce.map.env=HADOOP_MAPRED_HOME=${HADOOP_HOME}  # 設置 Map 任務環境變量
+MAPRED-SITE.XML_mapreduce.reduce.env=HADOOP_MAPRED_HOME=${HADOOP_HOME}  # 設置 Reduce 任務環境變量
+MAPRED-SITE.XML_mapreduce.jobhistory.address=0.0.0.0:10020  # JobHistory Server 地址
+MAPRED-SITE.XML_mapreduce.jobhistory.webapp.address=0.0.0.0:19888  # JobHistory Server Web UI 端口
+
+# yarn-site.xml 配置
+YARN-SITE.XML_yarn.resourcemanager.hostname=resourcemanager  # YARN ResourceManager 主機名
+YARN-SITE.XML_yarn.nodemanager.pmem-check-enabled=true  # 啟用物理內存檢查 *java8 和 linux 虛擬內存兼容性不好java會沒法用 開啟物理內存
+YARN-SITE.XML_yarn.nodemanager.delete.debug-delay-sec=600  # 刪除容器日誌的延遲時間（單位：秒）
+YARN-SITE.XML_yarn.nodemanager.vmem-check-enabled=true  # 啟用虛擬內存檢查
+YARN-SITE.XML_yarn.nodemanager.aux-services=mapreduce_shuffle  # 設置輔助服務為 mapreduce_shuffle
+YARN-SITE.XML_yarn.nodemanager.resource.cpu-vcores=4  # 設置每個 NodeManager 提供的 CPU 核數
+YARN-SITE.XML_yarn.log-aggregation-enable=true  # 啟用 YARN 日誌聚合
+YARN-SITE.XML_yarn.log.server.url=http://namenode:19888/jobhistory/logs  # 指定 YARN 日誌伺服器 URL
+YARN-SITE.XML_yarn.log-aggregation.retain-seconds=604800  # 指定日誌在 HDFS 中保留的時間（秒）
+YARN-SITE.XML_yarn.application.classpath=opt/hadoop/etc/hadoop:/opt/hadoop/share/hadoop/common/lib/*:/opt/hadoop/share/hadoop/common/*:/opt/hadoop/share/hadoop/hdfs:/opt/hadoop/share/hadoop/hdfs/lib/*:/opt/hadoop/share/hadoop/hdfs/*:/opt/hadoop/share/hadoop/mapreduce/*:/opt/hadoop/share/hadoop/yarn:/opt/hadoop/share/hadoop/yarn/lib/*:/opt/hadoop/share/hadoop/yarn/*
+# 以上設置 YARN 任務運行時的 CLASSPATH，確保 Hadoop 組件可用
+
+# capacity-scheduler.xml 配置
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.maximum-applications=10000  # 最大支持的應用數量
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.maximum-am-resource-percent=0.1  # AM 資源最大佔比
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.resource-calculator=org.apache.hadoop.yarn.util.resource.DefaultResourceCalculator  # 資源計算方式
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.queues=default  # 根隊列設置
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.default.capacity=100  # 默認隊列的容量（百分比）
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.default.user-limit-factor=1  # 用戶最大可用資源係數
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.default.maximum-capacity=100  # 隊列最大容量
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.default.state=RUNNING  # 隊列當前狀態
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.default.acl_submit_applications=*  # 允許所有用戶提交應用
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.root.default.acl_administer_queue=*  # 允許所有用戶管理隊列
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.node-locality-delay=40  # 本地性延遲（任務優先在本地運行）
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.queue-mappings=  # 隊列映射（留空表示無映射）
+CAPACITY-SCHEDULER.XML_yarn.scheduler.capacity.queue-mappings-override.enable=false  # 是否啟用隊列映射重寫
+
+
+
+-------- 其他配置 -------
+
+------HDFS-SITE.XML------
+處理不同 DataNode 的併發心跳及客戶端病發的元數據操作 dfs.namenode.handler.count=20Xlog Cluster Size:
+dfs.namenode.handler.count=21
+
+擴容用 第一次要重啟集群  之後使用 myhadoop.sh stop , myhadoop.sh start
+白名單(需要在該路徑下添加whitelist)
+dfs.hosts=/opt/module/hadoop-3.1.3/etc/hadoop/whitelist
+刷新NameNode
+hdfs dfsadmin -refreshNodes
+數據均衡
+sbin/start-balancer.sh -threshold 10
+
+縮容用 第一次要重啟集群  之後使用 myhadoop.sh stop , myhadoop.sh start
+黑名單白名單(需要在該路徑下添加blacklist)
+dfs.hosts.exclude=/opt/module/hadoop-3.1.3/etc/hadoop/blacklist
+刷新NameNode
+hdfs dfsadmin -refreshNodes
+數據均衡
+sbin/start-balancer.sh -threshold 10
+
+----冷熱數據配置
+dfs.replication=2
+dfs.storage.policy.enabled=true
+dfs.daganode.data.dir=[SSD]file:///opt/module/hadoop-3.1.3/hdfsdata/ssd,[RAM_DISK]file:///opt/module/hadoop-3.1.3hdfsdata/ram_disk
+
+
+
+------CORE-SITE.XML------
+
+配置垃圾回收 1 分鐘 **web上刪除不會走回收站 代碼要通過new_Trash(conf) 移動到回收站
+hadoop fs -rm /a.txt 會走回收站
+fs.trash.interval=1
+
+
+
+
+------DFS-SITE.XML------
+
+DataNode多目錄配置 ( 同個節點多個 DataNode 添加新的硬碟 ) *每隔節點硬體不同要分別對應
+dfs.datanode.data.dir=file://{hadoop.tmp.dir}/dfs/data1,file://{hadoop.tmp.dir}/dfs/data2
+添加硬碟並設置結舔后需數據均衡 同一節點附載均衡:
+生成均衡計畫:
+hdfs diskbalancer -plan hadoop103
+執行均衡計畫:
+hdfs diskbalancer -execute hadoop103.plan.json
+查看當前均衡計畫執行情況:
+hdfs diskbalancer -query hadoop103
+取消均衡計畫:
+hdfs diskbalancer -cancel hadoop103.plan.json
+
+------MAPRED-SITE.XML------
+
+MapReduce參數調優
+MAPRED-SITE.XML_mapreduce.task.io.sort.mb=100  # 環形緩衝區大小，默認100m
+MAPRED-SITE.XML_mapreduce.map.sort.spill.percent=0.80  # 環形緩衝區溢寫閾值，默認0.8
+MAPRED-SITE.XML_mapreduce.task.io.sort.factor=10  #merge合併次數，默認10個
+MAPRED-SITE.XML_mapreduce.map.memory.mb=-1  # maptask內存，默認1g； maptask堆內存大小默認和該值大小一致mapreduce.map.java.opts
+MAPRED-SITE.XML_mapreduce.map.cpu.vcores=1  # maptask內存，默認1g； matask的CPU核數，默認1個
+MAPRED-SITE.XML_mapreduce.map.maxattempts=4  # matask異常重試次數，默認4次
+MAPRED-SITE.XML_mapreduce.reduce.shuffle.parallelcopies=5  # 每個Reduce去Map中拉取數據的并行數。默認值是5
+MAPRED-SITE.XML_mapreduce.reduce.shuffle.input.buffer.percent=0.70  # Buffer大小佔Reduce可用內存的比例，默認值0.7
+MAPRED-SITE.XML_mapreduce.reduce.shuffle.merge.percent=0.66  # Buffer中的數據達到多少比例開始寫入磁盤，默認值0.66
+MAPRED-SITE.XML_mapreduce.reduce.memory.mb=-1  # reducetask內存，默認1g；reducetask堆內存大小默認和該值大小一致mapreduce.reduce.java.opts
+MAPRED-SITE.XML_mapreduce.reduce.cpu.vcores=2  # reducetask的CPU核數，默認1個
+MAPRED-SITE.XML_mapreduce.reduce.maxattempts=4  # reducetask失敗重試次數，默認4次
+MAPRED-SITE.XML_mapreduce.job.reduce.slowstart.completedmaps=0.05  # 當MapTask完成的比例達到該值后才會為ReduceTask申請資源。默認是0.05
+MAPRED-SITE.XML_mapreduce.task.timeout=600000  # 如果程序在規定的默認10分鐘內沒有讀到數據，將強制超時退出
+
+
+------YARN-SITE.XML------
+
+YARN參數調優
+YARN-SITE.XML_yarn.resourcemanager.scheduler.class=org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler  # 選擇調度器，默認容量
+YARN-SITE.XML_yarn.resourcemanager.scheduler.client.thread-count=8  # ResourceManager處理調度器請求的線程數量,默認50；如果提交的任務數大於50，可以增加該值，但是不能超過3台 * 4線程 = 12線程（去除其他應用程序實際不能超過8）
+YARN-SITE.XML_yarn.nodemanager.resource.detect-hardware-capabilities=false  # 是否讓yarn自動檢測硬件進行配置，默認是false，如果該節點有很多其他應用程序，建議手動配置。如果該節點沒有其他應用程序，可以採用自動
+YARN-SITE.XML_yarn.nodemanager.resource.count-logical-processors-as-cores=false  # 是否將虛擬核數當作CPU核數，默認是false，採用物理CPU核數
+YARN-SITE.XML_yarn.nodemanager.resource.pcores-vcores-multiplier=1.0  # 虛擬核數和物理核數乘數，默認是1.0
+YARN-SITE.XML_yarn.nodemanager.resource.memory-mb=4096  # NodeManager使用內存數，默認8G，修改為4G內存
+YARN-SITE.XML_yarn.nodemanager.resource.cpu-vcores=4  # nodemanager的CPU核數，不按照硬件環境自動設定時默認是8個，修改為4個
+YARN-SITE.XML_yarn.scheduler.minimum-allocation-mb=1024  # 容器最小內存，默認1G
+YARN-SITE.XML_yarn.scheduler.maximum-allocation-mb=2048  # 容器最大內存，默認8G，修改為2G
+YARN-SITE.XML_yarn.scheduler.minimum-allocation-vcores=1  # 容器最小CPU核數，默認1個
+YARN-SITE.XML_yarn.scheduler.maximum-allocation-vcores=2  # 容器最大CPU核數，默認4個，修改為2個
+YARN-SITE.XML_yarn.nodemanager.vmem-check-enabled=false  # 虛擬內存檢查，默認打開，修改為關閉
+YARN-SITE.XML_yarn.nodemanager.vmem-pmem-ratio=2.1  # 虛擬內存和物理內存設置比例,默認2.1
+
+
+----------- uber 模式 針對小文件優化 (減少開關 開啟一個任務后 處理多筆 后才關閉) -----
+<!--  開啟uber模式，默認關閉 -->
+<property>
+  	<name>mapreduce.job.ubertask.enable</name>
+  	<value>true</value>
+</property>
+
+<!-- uber模式中最大的mapTask數量，即JVM重用的次數，只能向下修改，即小於9  -->
+<property>
+  	<name>mapreduce.job.ubertask.maxmaps</name>
+  	<value>9</value>
+</property>
+<!-- uber模式中最大的reduce數量，只能向下修改，即要不是0，要不是1 -->
+<property>
+  	<name>mapreduce.job.ubertask.maxreduces</name>
+  	<value>1</value>
+</property>
+<!-- uber模式中最大的輸入數據量，默認使用dfs.blocksize 的值，可向下修改 -->
+<property>
+  	<name>mapreduce.job.ubertask.maxbytes</name>
+  	<value></value>
+</property>
+
+
+
+
+

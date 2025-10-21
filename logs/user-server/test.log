@@ -1,0 +1,566 @@
+13:28:24.606 [main] INFO  org.apache.spark.SparkContext - Running Spark version 3.3.1
+13:28:24.628 [main] WARN  org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+13:28:24.657 [main] INFO  org.apache.spark.resource.ResourceUtils - ==============================================================
+13:28:24.657 [main] INFO  org.apache.spark.resource.ResourceUtils - No custom resources configured for spark.driver.
+13:28:24.657 [main] INFO  org.apache.spark.resource.ResourceUtils - ==============================================================
+13:28:24.657 [main] INFO  org.apache.spark.SparkContext - Submitted application: SparkStreaming
+13:28:24.665 [main] INFO  org.apache.spark.resource.ResourceProfile - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+13:28:24.670 [main] INFO  org.apache.spark.resource.ResourceProfile - Limiting resource is cpu
+13:28:24.670 [main] INFO  org.apache.spark.resource.ResourceProfileManager - Added ResourceProfile id: 0
+13:28:24.687 [main] INFO  org.apache.spark.SecurityManager - Changing view acls to: sai
+13:28:24.687 [main] INFO  org.apache.spark.SecurityManager - Changing modify acls to: sai
+13:28:24.687 [main] INFO  org.apache.spark.SecurityManager - Changing view acls groups to: 
+13:28:24.688 [main] INFO  org.apache.spark.SecurityManager - Changing modify acls groups to: 
+13:28:24.688 [main] INFO  org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(sai); groups with view permissions: Set(); users  with modify permissions: Set(sai); groups with modify permissions: Set()
+13:28:24.777 [main] INFO  org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 49917.
+13:28:24.785 [main] INFO  org.apache.spark.SparkEnv - Registering MapOutputTracker
+13:28:24.796 [main] INFO  org.apache.spark.SparkEnv - Registering BlockManagerMaster
+13:28:24.802 [main] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+13:28:24.802 [main] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint - BlockManagerMasterEndpoint up
+13:28:24.803 [main] INFO  org.apache.spark.SparkEnv - Registering BlockManagerMasterHeartbeat
+13:28:24.813 [main] INFO  org.apache.spark.storage.DiskBlockManager - Created local directory at /private/var/folders/l8/0_hmw7gn2tb1m64_td5vl9p80000gn/T/blockmgr-726c785e-9e69-4b1f-918a-a51537b54332
+13:28:24.835 [main] INFO  org.apache.spark.storage.memory.MemoryStore - MemoryStore started with capacity 2004.6 MiB
+13:28:24.842 [main] INFO  org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+13:28:24.857 [main] INFO  org.sparkproject.jetty.util.log - Logging initialized @5880ms to org.sparkproject.jetty.util.log.Slf4jLog
+13:28:24.902 [main] INFO  org.sparkproject.jetty.server.Server - jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 1.8.0_452-b09
+13:28:24.909 [main] INFO  org.sparkproject.jetty.server.Server - Started @5932ms
+13:28:24.923 [main] INFO  org.sparkproject.jetty.server.AbstractConnector - Started ServerConnector@7c974942{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+13:28:24.923 [main] INFO  org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+13:28:24.930 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1d4664d7{/,null,AVAILABLE,@Spark}
+13:28:24.955 [main] INFO  org.apache.spark.executor.Executor - Starting executor ID driver on host 172.20.10.7
+13:28:24.958 [main] INFO  org.apache.spark.executor.Executor - Starting executor with user classpath (userClassPathFirst = false): ''
+13:28:24.964 [main] INFO  org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 49918.
+13:28:24.964 [main] INFO  org.apache.spark.network.netty.NettyBlockTransferService - Server created on 172.20.10.7:49918
+13:28:24.964 [main] INFO  org.apache.spark.storage.BlockManager - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+13:28:24.966 [main] INFO  org.apache.spark.storage.BlockManagerMaster - Registering BlockManager BlockManagerId(driver, 172.20.10.7, 49918, None)
+13:28:24.967 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint - Registering block manager 172.20.10.7:49918 with 2004.6 MiB RAM, BlockManagerId(driver, 172.20.10.7, 49918, None)
+13:28:24.968 [main] INFO  org.apache.spark.storage.BlockManagerMaster - Registered BlockManager BlockManagerId(driver, 172.20.10.7, 49918, None)
+13:28:24.968 [main] INFO  org.apache.spark.storage.BlockManager - Initialized BlockManager: BlockManagerId(driver, 172.20.10.7, 49918, None)
+13:28:25.039 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Stopped o.s.j.s.ServletContextHandler@1d4664d7{/,null,STOPPED,@Spark}
+13:28:25.040 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3f93e4a8{/jobs,null,AVAILABLE,@Spark}
+13:28:25.040 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5445f5ba{/jobs/json,null,AVAILABLE,@Spark}
+13:28:25.040 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@c808207{/jobs/job,null,AVAILABLE,@Spark}
+13:28:25.041 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6a0cbc6f{/jobs/job/json,null,AVAILABLE,@Spark}
+13:28:25.041 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6f89292e{/stages,null,AVAILABLE,@Spark}
+13:28:25.041 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@de77232{/stages/json,null,AVAILABLE,@Spark}
+13:28:25.042 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4ab550d5{/stages/stage,null,AVAILABLE,@Spark}
+13:28:25.043 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@58e85c6f{/stages/stage/json,null,AVAILABLE,@Spark}
+13:28:25.043 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6ac0b715{/stages/pool,null,AVAILABLE,@Spark}
+13:28:25.044 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5c9ac4cc{/stages/pool/json,null,AVAILABLE,@Spark}
+13:28:25.044 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2264e43c{/storage,null,AVAILABLE,@Spark}
+13:28:25.044 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@31da3d60{/storage/json,null,AVAILABLE,@Spark}
+13:28:25.045 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@65ec8b24{/storage/rdd,null,AVAILABLE,@Spark}
+13:28:25.045 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5f18f9d2{/storage/rdd/json,null,AVAILABLE,@Spark}
+13:28:25.045 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@58b67519{/environment,null,AVAILABLE,@Spark}
+13:28:25.046 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@30d25c03{/environment/json,null,AVAILABLE,@Spark}
+13:28:25.046 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@116a2108{/executors,null,AVAILABLE,@Spark}
+13:28:25.047 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7c1c5936{/executors/json,null,AVAILABLE,@Spark}
+13:28:25.048 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3ac8cf9b{/executors/threadDump,null,AVAILABLE,@Spark}
+13:28:25.048 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1b15f922{/executors/threadDump/json,null,AVAILABLE,@Spark}
+13:28:25.052 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4b869331{/static,null,AVAILABLE,@Spark}
+13:28:25.052 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@64412d34{/,null,AVAILABLE,@Spark}
+13:28:25.053 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@38c2c309{/api,null,AVAILABLE,@Spark}
+13:28:25.053 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7f92b990{/jobs/job/kill,null,AVAILABLE,@Spark}
+13:28:25.054 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6c1832aa{/stages/stage/kill,null,AVAILABLE,@Spark}
+13:28:25.056 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7318daf8{/metrics/json,null,AVAILABLE,@Spark}
+13:28:25.214 [streaming-start] INFO  org.apache.spark.streaming.scheduler.ReceiverTracker - Starting 1 receivers
+13:28:25.215 [streaming-start] INFO  org.apache.spark.streaming.scheduler.ReceiverTracker - ReceiverTracker started
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.SocketInputDStream - Slide time = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.SocketInputDStream - Storage level = Serialized 1x Replicated
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.SocketInputDStream - Checkpoint interval = null
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.SocketInputDStream - Remember interval = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.SocketInputDStream - Initialized and validated org.apache.spark.streaming.dstream.SocketInputDStream@41c03a4
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.FlatMappedDStream - Slide time = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.FlatMappedDStream - Storage level = Serialized 1x Replicated
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.FlatMappedDStream - Checkpoint interval = null
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.FlatMappedDStream - Remember interval = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.FlatMappedDStream - Initialized and validated org.apache.spark.streaming.dstream.FlatMappedDStream@42ee82
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.MappedDStream - Slide time = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.MappedDStream - Storage level = Serialized 1x Replicated
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.MappedDStream - Checkpoint interval = null
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.MappedDStream - Remember interval = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.MappedDStream - Initialized and validated org.apache.spark.streaming.dstream.MappedDStream@12410fbc
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.ShuffledDStream - Slide time = 3000 ms
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.ShuffledDStream - Storage level = Serialized 1x Replicated
+13:28:25.216 [streaming-start] INFO  org.apache.spark.streaming.dstream.ShuffledDStream - Checkpoint interval = null
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ShuffledDStream - Remember interval = 3000 ms
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ShuffledDStream - Initialized and validated org.apache.spark.streaming.dstream.ShuffledDStream@4e1eb037
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ForEachDStream - Slide time = 3000 ms
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ForEachDStream - Storage level = Serialized 1x Replicated
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ForEachDStream - Checkpoint interval = null
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ForEachDStream - Remember interval = 3000 ms
+13:28:25.217 [streaming-start] INFO  org.apache.spark.streaming.dstream.ForEachDStream - Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@2afb9b73
+13:28:25.237 [streaming-start] INFO  org.apache.spark.streaming.util.RecurringTimer - Started timer for JobGenerator at time 1760506107000
+13:28:25.237 [streaming-start] INFO  org.apache.spark.streaming.scheduler.JobGenerator - Started JobGenerator at 1760506107000 ms
+13:28:25.238 [streaming-start] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Started JobScheduler
+13:28:25.239 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1e0895f5{/streaming,null,AVAILABLE,@Spark}
+13:28:25.239 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@fd9ebde{/streaming/json,null,AVAILABLE,@Spark}
+13:28:25.239 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6726cc69{/streaming/batch,null,AVAILABLE,@Spark}
+13:28:25.240 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@33899f7a{/streaming/batch/json,null,AVAILABLE,@Spark}
+13:28:25.240 [main] INFO  org.sparkproject.jetty.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@644ded04{/static/streaming,null,AVAILABLE,@Spark}
+13:28:25.241 [main] INFO  org.apache.spark.streaming.StreamingContext - StreamingContext started
+13:28:25.255 [dispatcher-event-loop-1] INFO  org.apache.spark.streaming.scheduler.ReceiverTracker - Receiver 0 started
+13:28:25.257 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Got job 0 (start at sparkStreamingSocket.java:39) with 1 output partitions
+13:28:25.258 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 0 (start at sparkStreamingSocket.java:39)
+13:28:25.258 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List()
+13:28:25.258 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+13:28:25.259 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609), which has no missing parents
+13:28:25.317 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_0 stored as values in memory (estimated size 100.0 KiB, free 2004.5 MiB)
+13:28:25.495 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 35.5 KiB, free 2004.5 MiB)
+13:28:25.497 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_0_piece0 in memory on 172.20.10.7:49918 (size: 35.5 KiB, free: 2004.6 MiB)
+13:28:25.499 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 0 from broadcast at DAGScheduler.scala:1513
+13:28:25.507 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:609) (first 15 tasks are for partitions Vector(0))
+13:28:25.508 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 0.0 with 1 tasks resource profile 0
+13:28:25.532 [dispatcher-event-loop-2] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 5450 bytes) taskResourceAssignments Map()
+13:28:25.538 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 0.0 (TID 0)
+13:28:25.652 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.util.RecurringTimer - Started timer for BlockGenerator at time 1760506105800
+13:28:25.652 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.receiver.BlockGenerator - Started BlockGenerator
+13:28:25.652 [Thread-15] INFO  org.apache.spark.streaming.receiver.BlockGenerator - Started block pushing thread
+13:28:25.654 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.scheduler.ReceiverTracker - Registered receiver for stream 0 from 172.20.10.7:49917
+13:28:25.654 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Starting receiver 0
+13:28:25.655 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.dstream.SocketReceiver - Connecting to 127.0.0.1:9999
+13:28:25.655 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.dstream.SocketReceiver - Connected to 127.0.0.1:9999
+13:28:25.655 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Called receiver 0 onStart
+13:28:25.655 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Waiting for receiver to be stopped
+13:28:27.051 [JobGenerator] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Added jobs for time 1760506107000 ms
+13:28:27.053 [JobScheduler] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Starting job streaming job 1760506107000 ms.0 from job set of time 1760506107000 ms
+13:28:27.076 [streaming-job-executor-0] INFO  org.apache.spark.SparkContext - Starting job: sortByKey at sparkStreamingSocket.java:75
+13:28:27.083 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Registering RDD 3 (mapToPair at sparkStreamingSocket.java:63) as input to shuffle 0
+13:28:27.085 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Got job 1 (sortByKey at sparkStreamingSocket.java:75) with 10 output partitions
+13:28:27.085 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 2 (sortByKey at sparkStreamingSocket.java:75)
+13:28:27.085 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 1)
+13:28:27.085 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Missing parents: List()
+13:28:27.086 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 2 (MapPartitionsRDD[6] at sortByKey at sparkStreamingSocket.java:75), which has no missing parents
+13:28:27.091 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_1 stored as values in memory (estimated size 7.0 KiB, free 2004.5 MiB)
+13:28:27.092 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 2004.5 MiB)
+13:28:27.092 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_1_piece0 in memory on 172.20.10.7:49918 (size: 3.6 KiB, free: 2004.6 MiB)
+13:28:27.094 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+13:28:27.094 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at sortByKey at sparkStreamingSocket.java:75) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+13:28:27.094 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 10 tasks resource profile 0
+13:28:27.095 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 1) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 2.0 (TID 2) (172.20.10.7, executor driver, partition 1, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 2.0 (TID 3) (172.20.10.7, executor driver, partition 2, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 2.0 (TID 4) (172.20.10.7, executor driver, partition 3, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 2.0 (TID 5) (172.20.10.7, executor driver, partition 4, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 2.0 (TID 6) (172.20.10.7, executor driver, partition 5, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 2.0 (TID 7) (172.20.10.7, executor driver, partition 6, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.096 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 2.0 (TID 8) (172.20.10.7, executor driver, partition 7, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.097 [dispatcher-event-loop-7] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 2.0 (TID 9) (172.20.10.7, executor driver, partition 8, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.097 [Executor task launch worker for task 0.0 in stage 2.0 (TID 1)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 1)
+13:28:27.097 [Executor task launch worker for task 1.0 in stage 2.0 (TID 2)] INFO  org.apache.spark.executor.Executor - Running task 1.0 in stage 2.0 (TID 2)
+13:28:27.097 [Executor task launch worker for task 3.0 in stage 2.0 (TID 4)] INFO  org.apache.spark.executor.Executor - Running task 3.0 in stage 2.0 (TID 4)
+13:28:27.097 [Executor task launch worker for task 2.0 in stage 2.0 (TID 3)] INFO  org.apache.spark.executor.Executor - Running task 2.0 in stage 2.0 (TID 3)
+13:28:27.097 [Executor task launch worker for task 4.0 in stage 2.0 (TID 5)] INFO  org.apache.spark.executor.Executor - Running task 4.0 in stage 2.0 (TID 5)
+13:28:27.098 [Executor task launch worker for task 6.0 in stage 2.0 (TID 7)] INFO  org.apache.spark.executor.Executor - Running task 6.0 in stage 2.0 (TID 7)
+13:28:27.098 [Executor task launch worker for task 5.0 in stage 2.0 (TID 6)] INFO  org.apache.spark.executor.Executor - Running task 5.0 in stage 2.0 (TID 6)
+13:28:27.099 [Executor task launch worker for task 7.0 in stage 2.0 (TID 8)] INFO  org.apache.spark.executor.Executor - Running task 7.0 in stage 2.0 (TID 8)
+13:28:27.099 [Executor task launch worker for task 8.0 in stage 2.0 (TID 9)] INFO  org.apache.spark.executor.Executor - Running task 8.0 in stage 2.0 (TID 9)
+13:28:27.197 [Executor task launch worker for task 7.0 in stage 2.0 (TID 8)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 1.0 in stage 2.0 (TID 2)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 8.0 in stage 2.0 (TID 9)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 2.0 in stage 2.0 (TID 3)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 3.0 in stage 2.0 (TID 4)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 6.0 in stage 2.0 (TID 7)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 0.0 in stage 2.0 (TID 1)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 5.0 in stage 2.0 (TID 6)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.197 [Executor task launch worker for task 4.0 in stage 2.0 (TID 5)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.198 [Executor task launch worker for task 0.0 in stage 2.0 (TID 1)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 8.0 in stage 2.0 (TID 9)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 2.0 in stage 2.0 (TID 3)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 4.0 in stage 2.0 (TID 5)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 5.0 in stage 2.0 (TID 6)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 1.0 in stage 2.0 (TID 2)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 7.0 in stage 2.0 (TID 8)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 3.0 in stage 2.0 (TID 4)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.199 [Executor task launch worker for task 6.0 in stage 2.0 (TID 7)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 5 ms
+13:28:27.213 [Executor task launch worker for task 3.0 in stage 2.0 (TID 4)] INFO  org.apache.spark.executor.Executor - Finished task 3.0 in stage 2.0 (TID 4). 1560 bytes result sent to driver
+13:28:27.214 [Executor task launch worker for task 1.0 in stage 2.0 (TID 2)] INFO  org.apache.spark.executor.Executor - Finished task 1.0 in stage 2.0 (TID 2). 1560 bytes result sent to driver
+13:28:27.214 [Executor task launch worker for task 7.0 in stage 2.0 (TID 8)] INFO  org.apache.spark.executor.Executor - Finished task 7.0 in stage 2.0 (TID 8). 1560 bytes result sent to driver
+13:28:27.215 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 2.0 (TID 10) (172.20.10.7, executor driver, partition 9, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.216 [Executor task launch worker for task 2.0 in stage 2.0 (TID 3)] INFO  org.apache.spark.executor.Executor - Finished task 2.0 in stage 2.0 (TID 3). 1560 bytes result sent to driver
+13:28:27.216 [Executor task launch worker for task 8.0 in stage 2.0 (TID 9)] INFO  org.apache.spark.executor.Executor - Finished task 8.0 in stage 2.0 (TID 9). 1560 bytes result sent to driver
+13:28:27.216 [Executor task launch worker for task 9.0 in stage 2.0 (TID 10)] INFO  org.apache.spark.executor.Executor - Running task 9.0 in stage 2.0 (TID 10)
+13:28:27.216 [Executor task launch worker for task 4.0 in stage 2.0 (TID 5)] INFO  org.apache.spark.executor.Executor - Finished task 4.0 in stage 2.0 (TID 5). 1560 bytes result sent to driver
+13:28:27.216 [Executor task launch worker for task 5.0 in stage 2.0 (TID 6)] INFO  org.apache.spark.executor.Executor - Finished task 5.0 in stage 2.0 (TID 6). 1560 bytes result sent to driver
+13:28:27.216 [Executor task launch worker for task 0.0 in stage 2.0 (TID 1)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 1). 1560 bytes result sent to driver
+13:28:27.216 [Executor task launch worker for task 6.0 in stage 2.0 (TID 7)] INFO  org.apache.spark.executor.Executor - Finished task 6.0 in stage 2.0 (TID 7). 1560 bytes result sent to driver
+13:28:27.218 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 2.0 (TID 2) in 122 ms on 172.20.10.7 (executor driver) (1/10)
+13:28:27.218 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 2.0 (TID 3) in 122 ms on 172.20.10.7 (executor driver) (2/10)
+13:28:27.218 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 2.0 (TID 4) in 122 ms on 172.20.10.7 (executor driver) (3/10)
+13:28:27.219 [Executor task launch worker for task 9.0 in stage 2.0 (TID 10)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.219 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 2.0 (TID 8) in 123 ms on 172.20.10.7 (executor driver) (4/10)
+13:28:27.219 [Executor task launch worker for task 9.0 in stage 2.0 (TID 10)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.219 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 2.0 (TID 5) in 123 ms on 172.20.10.7 (executor driver) (5/10)
+13:28:27.219 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 2.0 (TID 9) in 122 ms on 172.20.10.7 (executor driver) (6/10)
+13:28:27.219 [Executor task launch worker for task 9.0 in stage 2.0 (TID 10)] INFO  org.apache.spark.executor.Executor - Finished task 9.0 in stage 2.0 (TID 10). 1517 bytes result sent to driver
+13:28:27.220 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 2.0 (TID 6) in 124 ms on 172.20.10.7 (executor driver) (7/10)
+13:28:27.220 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 1) in 125 ms on 172.20.10.7 (executor driver) (8/10)
+13:28:27.220 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 2.0 (TID 7) in 124 ms on 172.20.10.7 (executor driver) (9/10)
+13:28:27.221 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 2.0 (TID 10) in 6 ms on 172.20.10.7 (executor driver) (10/10)
+13:28:27.221 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+13:28:27.223 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ResultStage 2 (sortByKey at sparkStreamingSocket.java:75) finished in 0.134 s
+13:28:27.224 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+13:28:27.224 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 2: Stage finished
+13:28:27.225 [streaming-job-executor-0] INFO  org.apache.spark.scheduler.DAGScheduler - Job 1 finished: sortByKey at sparkStreamingSocket.java:75, took 0.149156 s
+13:28:27.230 [streaming-job-executor-0] INFO  org.apache.spark.SparkContext - Starting job: collect at sparkStreamingSocket.java:75
+13:28:27.231 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Registering RDD 4 (reduceByKey at sparkStreamingSocket.java:71) as input to shuffle 1
+13:28:27.231 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Got job 2 (collect at sparkStreamingSocket.java:75) with 1 output partitions
+13:28:27.231 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 5 (collect at sparkStreamingSocket.java:75)
+13:28:27.231 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 4)
+13:28:27.231 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 4)
+13:28:27.232 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 4 (ShuffledRDD[4] at reduceByKey at sparkStreamingSocket.java:71), which has no missing parents
+13:28:27.234 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_2 stored as values in memory (estimated size 5.5 KiB, free 2004.5 MiB)
+13:28:27.234 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.2 KiB, free 2004.4 MiB)
+13:28:27.235 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_2_piece0 in memory on 172.20.10.7:49918 (size: 3.2 KiB, free: 2004.6 MiB)
+13:28:27.235 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+13:28:27.236 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ShuffleMapStage 4 (ShuffledRDD[4] at reduceByKey at sparkStreamingSocket.java:71) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+13:28:27.236 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 4.0 with 10 tasks resource profile 0
+13:28:27.237 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 4.0 (TID 11) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.237 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 4.0 (TID 12) (172.20.10.7, executor driver, partition 1, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.237 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 4.0 (TID 13) (172.20.10.7, executor driver, partition 2, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.237 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 4.0 (TID 14) (172.20.10.7, executor driver, partition 3, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.237 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 4.0 (TID 15) (172.20.10.7, executor driver, partition 4, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.237 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 4.0 (TID 16) (172.20.10.7, executor driver, partition 5, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.238 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 4.0 (TID 17) (172.20.10.7, executor driver, partition 6, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.238 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 4.0 (TID 18) (172.20.10.7, executor driver, partition 7, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.238 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 4.0 (TID 19) (172.20.10.7, executor driver, partition 8, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.238 [Executor task launch worker for task 1.0 in stage 4.0 (TID 12)] INFO  org.apache.spark.executor.Executor - Running task 1.0 in stage 4.0 (TID 12)
+13:28:27.238 [Executor task launch worker for task 2.0 in stage 4.0 (TID 13)] INFO  org.apache.spark.executor.Executor - Running task 2.0 in stage 4.0 (TID 13)
+13:28:27.238 [Executor task launch worker for task 4.0 in stage 4.0 (TID 15)] INFO  org.apache.spark.executor.Executor - Running task 4.0 in stage 4.0 (TID 15)
+13:28:27.238 [Executor task launch worker for task 0.0 in stage 4.0 (TID 11)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 4.0 (TID 11)
+13:28:27.238 [Executor task launch worker for task 7.0 in stage 4.0 (TID 18)] INFO  org.apache.spark.executor.Executor - Running task 7.0 in stage 4.0 (TID 18)
+13:28:27.238 [Executor task launch worker for task 3.0 in stage 4.0 (TID 14)] INFO  org.apache.spark.executor.Executor - Running task 3.0 in stage 4.0 (TID 14)
+13:28:27.238 [Executor task launch worker for task 6.0 in stage 4.0 (TID 17)] INFO  org.apache.spark.executor.Executor - Running task 6.0 in stage 4.0 (TID 17)
+13:28:27.238 [Executor task launch worker for task 5.0 in stage 4.0 (TID 16)] INFO  org.apache.spark.executor.Executor - Running task 5.0 in stage 4.0 (TID 16)
+13:28:27.238 [Executor task launch worker for task 8.0 in stage 4.0 (TID 19)] INFO  org.apache.spark.executor.Executor - Running task 8.0 in stage 4.0 (TID 19)
+13:28:27.244 [Executor task launch worker for task 5.0 in stage 4.0 (TID 16)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 5.0 in stage 4.0 (TID 16)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 7.0 in stage 4.0 (TID 18)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 0.0 in stage 4.0 (TID 11)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 0.0 in stage 4.0 (TID 11)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 7.0 in stage 4.0 (TID 18)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 1.0 in stage 4.0 (TID 12)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 3.0 in stage 4.0 (TID 14)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 4.0 in stage 4.0 (TID 15)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 6.0 in stage 4.0 (TID 17)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 8.0 in stage 4.0 (TID 19)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 1.0 in stage 4.0 (TID 12)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 3.0 in stage 4.0 (TID 14)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 2.0 in stage 4.0 (TID 13)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.244 [Executor task launch worker for task 4.0 in stage 4.0 (TID 15)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 8.0 in stage 4.0 (TID 19)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 2.0 in stage 4.0 (TID 13)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.244 [Executor task launch worker for task 6.0 in stage 4.0 (TID 17)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.250 [Executor task launch worker for task 7.0 in stage 4.0 (TID 18)] INFO  org.apache.spark.executor.Executor - Finished task 7.0 in stage 4.0 (TID 18). 1340 bytes result sent to driver
+13:28:27.250 [Executor task launch worker for task 3.0 in stage 4.0 (TID 14)] INFO  org.apache.spark.executor.Executor - Finished task 3.0 in stage 4.0 (TID 14). 1340 bytes result sent to driver
+13:28:27.250 [Executor task launch worker for task 5.0 in stage 4.0 (TID 16)] INFO  org.apache.spark.executor.Executor - Finished task 5.0 in stage 4.0 (TID 16). 1340 bytes result sent to driver
+13:28:27.250 [Executor task launch worker for task 2.0 in stage 4.0 (TID 13)] INFO  org.apache.spark.executor.Executor - Finished task 2.0 in stage 4.0 (TID 13). 1340 bytes result sent to driver
+13:28:27.250 [Executor task launch worker for task 8.0 in stage 4.0 (TID 19)] INFO  org.apache.spark.executor.Executor - Finished task 8.0 in stage 4.0 (TID 19). 1340 bytes result sent to driver
+13:28:27.250 [Executor task launch worker for task 4.0 in stage 4.0 (TID 15)] INFO  org.apache.spark.executor.Executor - Finished task 4.0 in stage 4.0 (TID 15). 1340 bytes result sent to driver
+13:28:27.250 [Executor task launch worker for task 1.0 in stage 4.0 (TID 12)] INFO  org.apache.spark.executor.Executor - Finished task 1.0 in stage 4.0 (TID 12). 1340 bytes result sent to driver
+13:28:27.251 [dispatcher-event-loop-1] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 4.0 (TID 20) (172.20.10.7, executor driver, partition 9, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:27.251 [Executor task launch worker for task 6.0 in stage 4.0 (TID 17)] INFO  org.apache.spark.executor.Executor - Finished task 6.0 in stage 4.0 (TID 17). 1340 bytes result sent to driver
+13:28:27.251 [Executor task launch worker for task 9.0 in stage 4.0 (TID 20)] INFO  org.apache.spark.executor.Executor - Running task 9.0 in stage 4.0 (TID 20)
+13:28:27.251 [Executor task launch worker for task 0.0 in stage 4.0 (TID 11)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 4.0 (TID 11). 1340 bytes result sent to driver
+13:28:27.251 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 4.0 (TID 18) in 13 ms on 172.20.10.7 (executor driver) (1/10)
+13:28:27.251 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 4.0 (TID 14) in 14 ms on 172.20.10.7 (executor driver) (2/10)
+13:28:27.252 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 4.0 (TID 13) in 15 ms on 172.20.10.7 (executor driver) (3/10)
+13:28:27.252 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 4.0 (TID 16) in 15 ms on 172.20.10.7 (executor driver) (4/10)
+13:28:27.252 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 4.0 (TID 19) in 14 ms on 172.20.10.7 (executor driver) (5/10)
+13:28:27.252 [Executor task launch worker for task 9.0 in stage 4.0 (TID 20)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.252 [Executor task launch worker for task 9.0 in stage 4.0 (TID 20)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.253 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 4.0 (TID 15) in 16 ms on 172.20.10.7 (executor driver) (6/10)
+13:28:27.253 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 4.0 (TID 12) in 16 ms on 172.20.10.7 (executor driver) (7/10)
+13:28:27.253 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 4.0 (TID 17) in 16 ms on 172.20.10.7 (executor driver) (8/10)
+13:28:27.254 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 4.0 (TID 11) in 18 ms on 172.20.10.7 (executor driver) (9/10)
+13:28:27.254 [Executor task launch worker for task 9.0 in stage 4.0 (TID 20)] INFO  org.apache.spark.executor.Executor - Finished task 9.0 in stage 4.0 (TID 20). 1340 bytes result sent to driver
+13:28:27.254 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 4.0 (TID 20) in 4 ms on 172.20.10.7 (executor driver) (10/10)
+13:28:27.255 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+13:28:27.255 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 4 (reduceByKey at sparkStreamingSocket.java:71) finished in 0.022 s
+13:28:27.255 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+13:28:27.255 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - running: Set(ResultStage 0)
+13:28:27.255 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 5)
+13:28:27.255 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - failed: Set()
+13:28:27.256 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 5 (ShuffledRDD[7] at sortByKey at sparkStreamingSocket.java:75), which has no missing parents
+13:28:27.258 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_3 stored as values in memory (estimated size 5.0 KiB, free 2004.4 MiB)
+13:28:27.258 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 2004.4 MiB)
+13:28:27.259 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_3_piece0 in memory on 172.20.10.7:49918 (size: 2.9 KiB, free: 2004.6 MiB)
+13:28:27.259 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+13:28:27.259 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 5 (ShuffledRDD[7] at sortByKey at sparkStreamingSocket.java:75) (first 15 tasks are for partitions Vector(0))
+13:28:27.259 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 5.0 with 1 tasks resource profile 0
+13:28:27.260 [dispatcher-event-loop-3] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 5.0 (TID 21) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:27.260 [Executor task launch worker for task 0.0 in stage 5.0 (TID 21)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 5.0 (TID 21)
+13:28:27.263 [Executor task launch worker for task 0.0 in stage 5.0 (TID 21)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:27.263 [Executor task launch worker for task 0.0 in stage 5.0 (TID 21)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:27.269 [Executor task launch worker for task 0.0 in stage 5.0 (TID 21)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 5.0 (TID 21). 1228 bytes result sent to driver
+13:28:27.270 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 5.0 (TID 21) in 10 ms on 172.20.10.7 (executor driver) (1/1)
+13:28:27.270 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+13:28:27.270 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ResultStage 5 (collect at sparkStreamingSocket.java:75) finished in 0.013 s
+13:28:27.271 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+13:28:27.271 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 5: Stage finished
+13:28:27.271 [streaming-job-executor-0] INFO  org.apache.spark.scheduler.DAGScheduler - Job 2 finished: collect at sparkStreamingSocket.java:75, took 0.040766 s
+13:28:27.272 [JobScheduler] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Finished job streaming job 1760506107000 ms.0 from job set of time 1760506107000 ms
+13:28:27.273 [JobScheduler] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Total delay: 0.272 s for time 1760506107000 ms (execution: 0.220 s)
+13:28:27.274 [JobGenerator] INFO  org.apache.spark.streaming.scheduler.ReceivedBlockTracker - Deleting batches: 
+13:28:27.276 [JobGenerator] INFO  org.apache.spark.streaming.scheduler.InputInfoTracker - remove old batch metadata: 
+13:28:28.211 [Thread-15] INFO  org.apache.spark.storage.memory.MemoryStore - Block input-0-1760506108000 stored as values in memory (estimated size 36.0 B, free 2004.4 MiB)
+13:28:28.212 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added input-0-1760506108000 in memory on 172.20.10.7:49918 (size: 36.0 B, free: 2004.6 MiB)
+13:28:28.222 [Thread-15] WARN  org.apache.spark.storage.RandomBlockReplicationPolicy - Expecting 1 replicas with only 0 peer/s.
+13:28:28.223 [Thread-15] WARN  org.apache.spark.storage.BlockManager - Block input-0-1760506108000 replicated to only 0 peer(s) instead of 1 peers
+13:28:28.227 [Thread-15] INFO  org.apache.spark.streaming.receiver.BlockGenerator - Pushed block input-0-1760506108000
+13:28:30.018 [JobGenerator] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Added jobs for time 1760506110000 ms
+13:28:30.019 [JobScheduler] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Starting job streaming job 1760506110000 ms.0 from job set of time 1760506110000 ms
+13:28:30.028 [streaming-job-executor-0] INFO  org.apache.spark.SparkContext - Starting job: sortByKey at sparkStreamingSocket.java:75
+13:28:30.032 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Registering RDD 10 (mapToPair at sparkStreamingSocket.java:63) as input to shuffle 2
+13:28:30.032 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Got job 3 (sortByKey at sparkStreamingSocket.java:75) with 10 output partitions
+13:28:30.032 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 7 (sortByKey at sparkStreamingSocket.java:75)
+13:28:30.032 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 6)
+13:28:30.033 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 6)
+13:28:30.034 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 6 (MapPartitionsRDD[10] at mapToPair at sparkStreamingSocket.java:63), which has no missing parents
+13:28:30.040 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_4 stored as values in memory (estimated size 6.2 KiB, free 2004.4 MiB)
+13:28:30.041 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.4 KiB, free 2004.4 MiB)
+13:28:30.042 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_4_piece0 in memory on 172.20.10.7:49918 (size: 3.4 KiB, free: 2004.6 MiB)
+13:28:30.042 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+13:28:30.043 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[10] at mapToPair at sparkStreamingSocket.java:63) (first 15 tasks are for partitions Vector(0))
+13:28:30.043 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 6.0 with 1 tasks resource profile 0
+13:28:30.044 [dispatcher-event-loop-2] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 6.0 (TID 22) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 4383 bytes) taskResourceAssignments Map()
+13:28:30.045 [Executor task launch worker for task 0.0 in stage 6.0 (TID 22)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 6.0 (TID 22)
+13:28:30.050 [Executor task launch worker for task 0.0 in stage 6.0 (TID 22)] INFO  org.apache.spark.storage.BlockManager - Found block input-0-1760506108000 locally
+13:28:30.059 [Executor task launch worker for task 0.0 in stage 6.0 (TID 22)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 6.0 (TID 22). 1177 bytes result sent to driver
+13:28:30.060 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 6.0 (TID 22) in 16 ms on 172.20.10.7 (executor driver) (1/1)
+13:28:30.060 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+13:28:30.061 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 6 (mapToPair at sparkStreamingSocket.java:63) finished in 0.024 s
+13:28:30.061 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+13:28:30.061 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - running: Set(ResultStage 0)
+13:28:30.061 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 7)
+13:28:30.061 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - failed: Set()
+13:28:30.061 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 7 (MapPartitionsRDD[13] at sortByKey at sparkStreamingSocket.java:75), which has no missing parents
+13:28:30.064 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_5 stored as values in memory (estimated size 7.0 KiB, free 2004.4 MiB)
+13:28:30.065 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 2004.4 MiB)
+13:28:30.065 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_5_piece0 in memory on 172.20.10.7:49918 (size: 3.6 KiB, free: 2004.5 MiB)
+13:28:30.066 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 5 from broadcast at DAGScheduler.scala:1513
+13:28:30.066 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ResultStage 7 (MapPartitionsRDD[13] at sortByKey at sparkStreamingSocket.java:75) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+13:28:30.066 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 7.0 with 10 tasks resource profile 0
+13:28:30.067 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 7.0 (TID 23) (172.20.10.7, executor driver, partition 7, NODE_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.067 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 7.0 (TID 24) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.067 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 7.0 (TID 25) (172.20.10.7, executor driver, partition 1, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.067 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 7.0 (TID 26) (172.20.10.7, executor driver, partition 2, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.068 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 7.0 (TID 27) (172.20.10.7, executor driver, partition 3, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.068 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 7.0 (TID 28) (172.20.10.7, executor driver, partition 4, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.068 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 7.0 (TID 29) (172.20.10.7, executor driver, partition 5, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.068 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 7.0 (TID 30) (172.20.10.7, executor driver, partition 6, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.068 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 7.0 (TID 31) (172.20.10.7, executor driver, partition 8, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.068 [Executor task launch worker for task 7.0 in stage 7.0 (TID 23)] INFO  org.apache.spark.executor.Executor - Running task 7.0 in stage 7.0 (TID 23)
+13:28:30.068 [Executor task launch worker for task 2.0 in stage 7.0 (TID 26)] INFO  org.apache.spark.executor.Executor - Running task 2.0 in stage 7.0 (TID 26)
+13:28:30.068 [Executor task launch worker for task 0.0 in stage 7.0 (TID 24)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 7.0 (TID 24)
+13:28:30.068 [Executor task launch worker for task 4.0 in stage 7.0 (TID 28)] INFO  org.apache.spark.executor.Executor - Running task 4.0 in stage 7.0 (TID 28)
+13:28:30.068 [Executor task launch worker for task 3.0 in stage 7.0 (TID 27)] INFO  org.apache.spark.executor.Executor - Running task 3.0 in stage 7.0 (TID 27)
+13:28:30.068 [Executor task launch worker for task 6.0 in stage 7.0 (TID 30)] INFO  org.apache.spark.executor.Executor - Running task 6.0 in stage 7.0 (TID 30)
+13:28:30.068 [Executor task launch worker for task 8.0 in stage 7.0 (TID 31)] INFO  org.apache.spark.executor.Executor - Running task 8.0 in stage 7.0 (TID 31)
+13:28:30.068 [Executor task launch worker for task 1.0 in stage 7.0 (TID 25)] INFO  org.apache.spark.executor.Executor - Running task 1.0 in stage 7.0 (TID 25)
+13:28:30.068 [Executor task launch worker for task 5.0 in stage 7.0 (TID 29)] INFO  org.apache.spark.executor.Executor - Running task 5.0 in stage 7.0 (TID 29)
+13:28:30.071 [Executor task launch worker for task 4.0 in stage 7.0 (TID 28)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.071 [Executor task launch worker for task 4.0 in stage 7.0 (TID 28)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.071 [Executor task launch worker for task 5.0 in stage 7.0 (TID 29)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.071 [Executor task launch worker for task 6.0 in stage 7.0 (TID 30)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.071 [Executor task launch worker for task 1.0 in stage 7.0 (TID 25)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.071 [Executor task launch worker for task 1.0 in stage 7.0 (TID 25)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.071 [Executor task launch worker for task 6.0 in stage 7.0 (TID 30)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.071 [Executor task launch worker for task 5.0 in stage 7.0 (TID 29)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.071 [Executor task launch worker for task 8.0 in stage 7.0 (TID 31)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.071 [Executor task launch worker for task 0.0 in stage 7.0 (TID 24)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.072 [Executor task launch worker for task 0.0 in stage 7.0 (TID 24)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.072 [Executor task launch worker for task 8.0 in stage 7.0 (TID 31)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.072 [Executor task launch worker for task 4.0 in stage 7.0 (TID 28)] INFO  org.apache.spark.executor.Executor - Finished task 4.0 in stage 7.0 (TID 28). 1517 bytes result sent to driver
+13:28:30.072 [Executor task launch worker for task 6.0 in stage 7.0 (TID 30)] INFO  org.apache.spark.executor.Executor - Finished task 6.0 in stage 7.0 (TID 30). 1517 bytes result sent to driver
+13:28:30.072 [Executor task launch worker for task 2.0 in stage 7.0 (TID 26)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.072 [Executor task launch worker for task 2.0 in stage 7.0 (TID 26)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.072 [Executor task launch worker for task 1.0 in stage 7.0 (TID 25)] INFO  org.apache.spark.executor.Executor - Finished task 1.0 in stage 7.0 (TID 25). 1517 bytes result sent to driver
+13:28:30.073 [Executor task launch worker for task 0.0 in stage 7.0 (TID 24)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 7.0 (TID 24). 1517 bytes result sent to driver
+13:28:30.072 [Executor task launch worker for task 3.0 in stage 7.0 (TID 27)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.073 [dispatcher-event-loop-8] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 7.0 (TID 32) (172.20.10.7, executor driver, partition 9, PROCESS_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.073 [Executor task launch worker for task 3.0 in stage 7.0 (TID 27)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.073 [Executor task launch worker for task 5.0 in stage 7.0 (TID 29)] INFO  org.apache.spark.executor.Executor - Finished task 5.0 in stage 7.0 (TID 29). 1517 bytes result sent to driver
+13:28:30.073 [Executor task launch worker for task 9.0 in stage 7.0 (TID 32)] INFO  org.apache.spark.executor.Executor - Running task 9.0 in stage 7.0 (TID 32)
+13:28:30.073 [Executor task launch worker for task 8.0 in stage 7.0 (TID 31)] INFO  org.apache.spark.executor.Executor - Finished task 8.0 in stage 7.0 (TID 31). 1517 bytes result sent to driver
+13:28:30.073 [Executor task launch worker for task 3.0 in stage 7.0 (TID 27)] INFO  org.apache.spark.executor.Executor - Finished task 3.0 in stage 7.0 (TID 27). 1517 bytes result sent to driver
+13:28:30.073 [Executor task launch worker for task 2.0 in stage 7.0 (TID 26)] INFO  org.apache.spark.executor.Executor - Finished task 2.0 in stage 7.0 (TID 26). 1517 bytes result sent to driver
+13:28:30.074 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 7.0 (TID 28) in 6 ms on 172.20.10.7 (executor driver) (1/10)
+13:28:30.074 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 7.0 (TID 30) in 6 ms on 172.20.10.7 (executor driver) (2/10)
+13:28:30.074 [Executor task launch worker for task 7.0 in stage 7.0 (TID 23)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 1 (129.0 B) non-empty blocks including 1 (129.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.074 [Executor task launch worker for task 7.0 in stage 7.0 (TID 23)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 2 ms
+13:28:30.074 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 7.0 (TID 25) in 7 ms on 172.20.10.7 (executor driver) (3/10)
+13:28:30.075 [Executor task launch worker for task 9.0 in stage 7.0 (TID 32)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.075 [Executor task launch worker for task 9.0 in stage 7.0 (TID 32)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.075 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 7.0 (TID 24) in 8 ms on 172.20.10.7 (executor driver) (4/10)
+13:28:30.075 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 7.0 (TID 29) in 7 ms on 172.20.10.7 (executor driver) (5/10)
+13:28:30.075 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 7.0 (TID 31) in 7 ms on 172.20.10.7 (executor driver) (6/10)
+13:28:30.075 [Executor task launch worker for task 9.0 in stage 7.0 (TID 32)] INFO  org.apache.spark.executor.Executor - Finished task 9.0 in stage 7.0 (TID 32). 1474 bytes result sent to driver
+13:28:30.076 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 7.0 (TID 26) in 9 ms on 172.20.10.7 (executor driver) (7/10)
+13:28:30.076 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 7.0 (TID 27) in 8 ms on 172.20.10.7 (executor driver) (8/10)
+13:28:30.076 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 7.0 (TID 32) in 3 ms on 172.20.10.7 (executor driver) (9/10)
+13:28:30.081 [Executor task launch worker for task 7.0 in stage 7.0 (TID 23)] INFO  org.apache.spark.executor.Executor - Finished task 7.0 in stage 7.0 (TID 23). 1521 bytes result sent to driver
+13:28:30.082 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 7.0 (TID 23) in 14 ms on 172.20.10.7 (executor driver) (10/10)
+13:28:30.082 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+13:28:30.082 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ResultStage 7 (sortByKey at sparkStreamingSocket.java:75) finished in 0.019 s
+13:28:30.082 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+13:28:30.082 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 7: Stage finished
+13:28:30.082 [streaming-job-executor-0] INFO  org.apache.spark.scheduler.DAGScheduler - Job 3 finished: sortByKey at sparkStreamingSocket.java:75, took 0.053839 s
+13:28:30.088 [streaming-job-executor-0] INFO  org.apache.spark.SparkContext - Starting job: collect at sparkStreamingSocket.java:75
+13:28:30.088 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Registering RDD 11 (reduceByKey at sparkStreamingSocket.java:71) as input to shuffle 3
+13:28:30.089 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Got job 4 (collect at sparkStreamingSocket.java:75) with 1 output partitions
+13:28:30.089 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Final stage: ResultStage 10 (collect at sparkStreamingSocket.java:75)
+13:28:30.089 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 9)
+13:28:30.089 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 9)
+13:28:30.089 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 9 (ShuffledRDD[11] at reduceByKey at sparkStreamingSocket.java:71), which has no missing parents
+13:28:30.090 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_6 stored as values in memory (estimated size 5.5 KiB, free 2004.4 MiB)
+13:28:30.091 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.2 KiB, free 2004.4 MiB)
+13:28:30.091 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_6_piece0 in memory on 172.20.10.7:49918 (size: 3.2 KiB, free: 2004.5 MiB)
+13:28:30.091 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 6 from broadcast at DAGScheduler.scala:1513
+13:28:30.092 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 10 missing tasks from ShuffleMapStage 9 (ShuffledRDD[11] at reduceByKey at sparkStreamingSocket.java:71) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+13:28:30.092 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 9.0 with 10 tasks resource profile 0
+13:28:30.093 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 7.0 in stage 9.0 (TID 33) (172.20.10.7, executor driver, partition 7, NODE_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.093 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 9.0 (TID 34) (172.20.10.7, executor driver, partition 0, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.093 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 1.0 in stage 9.0 (TID 35) (172.20.10.7, executor driver, partition 1, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.093 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 2.0 in stage 9.0 (TID 36) (172.20.10.7, executor driver, partition 2, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.093 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 3.0 in stage 9.0 (TID 37) (172.20.10.7, executor driver, partition 3, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.093 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 4.0 in stage 9.0 (TID 38) (172.20.10.7, executor driver, partition 4, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.094 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 5.0 in stage 9.0 (TID 39) (172.20.10.7, executor driver, partition 5, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.094 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 6.0 in stage 9.0 (TID 40) (172.20.10.7, executor driver, partition 6, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.094 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 8.0 in stage 9.0 (TID 41) (172.20.10.7, executor driver, partition 8, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.094 [Executor task launch worker for task 0.0 in stage 9.0 (TID 34)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 9.0 (TID 34)
+13:28:30.094 [Executor task launch worker for task 1.0 in stage 9.0 (TID 35)] INFO  org.apache.spark.executor.Executor - Running task 1.0 in stage 9.0 (TID 35)
+13:28:30.094 [Executor task launch worker for task 4.0 in stage 9.0 (TID 38)] INFO  org.apache.spark.executor.Executor - Running task 4.0 in stage 9.0 (TID 38)
+13:28:30.094 [Executor task launch worker for task 2.0 in stage 9.0 (TID 36)] INFO  org.apache.spark.executor.Executor - Running task 2.0 in stage 9.0 (TID 36)
+13:28:30.094 [Executor task launch worker for task 3.0 in stage 9.0 (TID 37)] INFO  org.apache.spark.executor.Executor - Running task 3.0 in stage 9.0 (TID 37)
+13:28:30.094 [Executor task launch worker for task 7.0 in stage 9.0 (TID 33)] INFO  org.apache.spark.executor.Executor - Running task 7.0 in stage 9.0 (TID 33)
+13:28:30.094 [Executor task launch worker for task 5.0 in stage 9.0 (TID 39)] INFO  org.apache.spark.executor.Executor - Running task 5.0 in stage 9.0 (TID 39)
+13:28:30.095 [Executor task launch worker for task 6.0 in stage 9.0 (TID 40)] INFO  org.apache.spark.executor.Executor - Running task 6.0 in stage 9.0 (TID 40)
+13:28:30.095 [Executor task launch worker for task 8.0 in stage 9.0 (TID 41)] INFO  org.apache.spark.executor.Executor - Running task 8.0 in stage 9.0 (TID 41)
+13:28:30.096 [Executor task launch worker for task 2.0 in stage 9.0 (TID 36)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.096 [Executor task launch worker for task 2.0 in stage 9.0 (TID 36)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.097 [Executor task launch worker for task 4.0 in stage 9.0 (TID 38)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 0.0 in stage 9.0 (TID 34)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 5.0 in stage 9.0 (TID 39)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 1.0 in stage 9.0 (TID 35)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 5.0 in stage 9.0 (TID 39)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.097 [Executor task launch worker for task 0.0 in stage 9.0 (TID 34)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.097 [Executor task launch worker for task 8.0 in stage 9.0 (TID 41)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 8.0 in stage 9.0 (TID 41)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.097 [Executor task launch worker for task 2.0 in stage 9.0 (TID 36)] INFO  org.apache.spark.executor.Executor - Finished task 2.0 in stage 9.0 (TID 36). 1340 bytes result sent to driver
+13:28:30.097 [Executor task launch worker for task 3.0 in stage 9.0 (TID 37)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 7.0 in stage 9.0 (TID 33)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 1 (129.0 B) non-empty blocks including 1 (129.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.097 [Executor task launch worker for task 1.0 in stage 9.0 (TID 35)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.097 [Executor task launch worker for task 4.0 in stage 9.0 (TID 38)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.098 [Executor task launch worker for task 3.0 in stage 9.0 (TID 37)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.098 [Executor task launch worker for task 7.0 in stage 9.0 (TID 33)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.098 [dispatcher-event-loop-3] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 9.0 in stage 9.0 (TID 42) (172.20.10.7, executor driver, partition 9, PROCESS_LOCAL, 4260 bytes) taskResourceAssignments Map()
+13:28:30.098 [Executor task launch worker for task 6.0 in stage 9.0 (TID 40)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.098 [Executor task launch worker for task 6.0 in stage 9.0 (TID 40)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.098 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 2.0 in stage 9.0 (TID 36) in 5 ms on 172.20.10.7 (executor driver) (1/10)
+13:28:30.098 [Executor task launch worker for task 9.0 in stage 9.0 (TID 42)] INFO  org.apache.spark.executor.Executor - Running task 9.0 in stage 9.0 (TID 42)
+13:28:30.099 [Executor task launch worker for task 5.0 in stage 9.0 (TID 39)] INFO  org.apache.spark.executor.Executor - Finished task 5.0 in stage 9.0 (TID 39). 1340 bytes result sent to driver
+13:28:30.099 [Executor task launch worker for task 1.0 in stage 9.0 (TID 35)] INFO  org.apache.spark.executor.Executor - Finished task 1.0 in stage 9.0 (TID 35). 1340 bytes result sent to driver
+13:28:30.099 [Executor task launch worker for task 8.0 in stage 9.0 (TID 41)] INFO  org.apache.spark.executor.Executor - Finished task 8.0 in stage 9.0 (TID 41). 1340 bytes result sent to driver
+13:28:30.099 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 5.0 in stage 9.0 (TID 39) in 5 ms on 172.20.10.7 (executor driver) (2/10)
+13:28:30.100 [Executor task launch worker for task 3.0 in stage 9.0 (TID 37)] INFO  org.apache.spark.executor.Executor - Finished task 3.0 in stage 9.0 (TID 37). 1340 bytes result sent to driver
+13:28:30.100 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 1.0 in stage 9.0 (TID 35) in 7 ms on 172.20.10.7 (executor driver) (3/10)
+13:28:30.100 [Executor task launch worker for task 0.0 in stage 9.0 (TID 34)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 9.0 (TID 34). 1340 bytes result sent to driver
+13:28:30.100 [Executor task launch worker for task 9.0 in stage 9.0 (TID 42)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 0 (0.0 B) non-empty blocks including 0 (0.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.100 [Executor task launch worker for task 9.0 in stage 9.0 (TID 42)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.100 [Executor task launch worker for task 4.0 in stage 9.0 (TID 38)] INFO  org.apache.spark.executor.Executor - Finished task 4.0 in stage 9.0 (TID 38). 1340 bytes result sent to driver
+13:28:30.100 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 8.0 in stage 9.0 (TID 41) in 6 ms on 172.20.10.7 (executor driver) (4/10)
+13:28:30.101 [Executor task launch worker for task 6.0 in stage 9.0 (TID 40)] INFO  org.apache.spark.executor.Executor - Finished task 6.0 in stage 9.0 (TID 40). 1340 bytes result sent to driver
+13:28:30.102 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 9.0 (TID 34) in 9 ms on 172.20.10.7 (executor driver) (5/10)
+13:28:30.102 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 3.0 in stage 9.0 (TID 37) in 9 ms on 172.20.10.7 (executor driver) (6/10)
+13:28:30.102 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 4.0 in stage 9.0 (TID 38) in 9 ms on 172.20.10.7 (executor driver) (7/10)
+13:28:30.102 [Executor task launch worker for task 9.0 in stage 9.0 (TID 42)] INFO  org.apache.spark.executor.Executor - Finished task 9.0 in stage 9.0 (TID 42). 1340 bytes result sent to driver
+13:28:30.102 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 6.0 in stage 9.0 (TID 40) in 8 ms on 172.20.10.7 (executor driver) (8/10)
+13:28:30.103 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 9.0 in stage 9.0 (TID 42) in 5 ms on 172.20.10.7 (executor driver) (9/10)
+13:28:30.106 [Executor task launch worker for task 7.0 in stage 9.0 (TID 33)] INFO  org.apache.spark.executor.Executor - Finished task 7.0 in stage 9.0 (TID 33). 1469 bytes result sent to driver
+13:28:30.106 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 7.0 in stage 9.0 (TID 33) in 13 ms on 172.20.10.7 (executor driver) (10/10)
+13:28:30.106 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+13:28:30.106 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ShuffleMapStage 9 (reduceByKey at sparkStreamingSocket.java:71) finished in 0.016 s
+13:28:30.106 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - looking for newly runnable stages
+13:28:30.107 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - running: Set(ResultStage 0)
+13:28:30.107 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 10)
+13:28:30.107 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - failed: Set()
+13:28:30.107 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting ResultStage 10 (ShuffledRDD[14] at sortByKey at sparkStreamingSocket.java:75), which has no missing parents
+13:28:30.108 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_7 stored as values in memory (estimated size 5.0 KiB, free 2004.4 MiB)
+13:28:30.109 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore - Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 2004.4 MiB)
+13:28:30.109 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo - Added broadcast_7_piece0 in memory on 172.20.10.7:49918 (size: 2.9 KiB, free: 2004.5 MiB)
+13:28:30.110 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 7 from broadcast at DAGScheduler.scala:1513
+13:28:30.110 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 10 (ShuffledRDD[14] at sortByKey at sparkStreamingSocket.java:75) (first 15 tasks are for partitions Vector(0))
+13:28:30.110 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Adding task set 10.0 with 1 tasks resource profile 0
+13:28:30.110 [dispatcher-event-loop-4] INFO  org.apache.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 10.0 (TID 43) (172.20.10.7, executor driver, partition 0, NODE_LOCAL, 4271 bytes) taskResourceAssignments Map()
+13:28:30.111 [Executor task launch worker for task 0.0 in stage 10.0 (TID 43)] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 10.0 (TID 43)
+13:28:30.112 [Executor task launch worker for task 0.0 in stage 10.0 (TID 43)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Getting 1 (129.0 B) non-empty blocks including 1 (129.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+13:28:30.112 [Executor task launch worker for task 0.0 in stage 10.0 (TID 43)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+13:28:30.112 [Executor task launch worker for task 0.0 in stage 10.0 (TID 43)] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 10.0 (TID 43). 1374 bytes result sent to driver
+13:28:30.113 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 10.0 (TID 43) in 3 ms on 172.20.10.7 (executor driver) (1/1)
+13:28:30.113 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+13:28:30.113 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - ResultStage 10 (collect at sparkStreamingSocket.java:75) finished in 0.006 s
+13:28:30.114 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler - Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+13:28:30.114 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl - Killing all running tasks in stage 10: Stage finished
+13:28:30.114 [streaming-job-executor-0] INFO  org.apache.spark.scheduler.DAGScheduler - Job 4 finished: collect at sparkStreamingSocket.java:75, took 0.025966 s
+13:28:30.114 [JobScheduler] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Finished job streaming job 1760506110000 ms.0 from job set of time 1760506110000 ms
+13:28:30.114 [JobScheduler] INFO  org.apache.spark.streaming.scheduler.JobScheduler - Total delay: 0.114 s for time 1760506110000 ms (execution: 0.095 s)
+13:28:30.115 [JobGenerator] INFO  org.apache.spark.rdd.ShuffledRDD - Removing RDD 4 from persistence list
+13:28:30.117 [JobGenerator] INFO  org.apache.spark.rdd.MapPartitionsRDD - Removing RDD 3 from persistence list
+13:28:30.118 [JobGenerator] INFO  org.apache.spark.rdd.MapPartitionsRDD - Removing RDD 2 from persistence list
+13:28:30.118 [block-manager-storage-async-thread-pool-1] INFO  org.apache.spark.storage.BlockManager - Removing RDD 3
+13:28:30.118 [block-manager-storage-async-thread-pool-0] INFO  org.apache.spark.storage.BlockManager - Removing RDD 4
+13:28:30.118 [block-manager-storage-async-thread-pool-2] INFO  org.apache.spark.storage.BlockManager - Removing RDD 2
+13:28:30.118 [JobGenerator] INFO  org.apache.spark.rdd.BlockRDD - Removing RDD 1 from persistence list
+13:28:30.119 [block-manager-storage-async-thread-pool-3] INFO  org.apache.spark.storage.BlockManager - Removing RDD 1
+13:28:30.119 [JobGenerator] INFO  org.apache.spark.streaming.dstream.SocketInputDStream - Removing blocks of RDD BlockRDD[1] at socketTextStream at sparkStreamingSocket.java:31 of time 1760506110000 ms
+13:28:30.119 [JobGenerator] INFO  org.apache.spark.streaming.scheduler.ReceivedBlockTracker - Deleting batches: 
+13:28:30.119 [JobGenerator] INFO  org.apache.spark.streaming.scheduler.InputInfoTracker - remove old batch metadata: 
+13:28:31.429 [shutdown-hook-0] INFO  org.apache.spark.streaming.StreamingContext - Invoking stop(stopGracefully=false) from shutdown hook
+13:28:31.431 [dispatcher-event-loop-2] INFO  org.apache.spark.streaming.scheduler.ReceiverTracker - Sent stop signal to all 1 receivers
+13:28:31.431 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Received stop signal
+13:28:31.431 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Stopping receiver with message: Stopped by driver: 
+13:28:31.432 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.dstream.SocketReceiver - Closed socket to 127.0.0.1:9999
+13:28:31.432 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Called receiver onStop
+13:28:31.432 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Deregistering receiver 0
+13:28:31.432 [dispatcher-event-loop-0] ERROR org.apache.spark.streaming.scheduler.ReceiverTracker - Deregistered receiver for stream 0: Stopped by driver
+13:28:31.433 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Stopped receiver 0
+13:28:31.433 [dispatcher-event-loop-6] INFO  org.apache.spark.streaming.receiver.BlockGenerator - Stopping BlockGenerator
+13:28:31.432 [Socket Receiver] WARN  org.apache.spark.streaming.dstream.SocketReceiver - Error receiving data
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_452]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_452]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_452]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_452]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) ~[?:1.8.0_452]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) ~[?:1.8.0_452]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) ~[?:1.8.0_452]
+	at java.io.InputStreamReader.read(InputStreamReader.java:184) ~[?:1.8.0_452]
+	at java.io.BufferedReader.fill(BufferedReader.java:161) ~[?:1.8.0_452]
+	at java.io.BufferedReader.readLine(BufferedReader.java:324) ~[?:1.8.0_452]
+	at java.io.BufferedReader.readLine(BufferedReader.java:389) ~[?:1.8.0_452]
+	at org.apache.spark.streaming.dstream.SocketReceiver$$anon$2.getNext(SocketInputDStream.scala:121) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.streaming.dstream.SocketReceiver$$anon$2.getNext(SocketInputDStream.scala:119) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:73) ~[spark-core_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.streaming.dstream.SocketReceiver.receive(SocketInputDStream.scala:91) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.streaming.dstream.SocketReceiver$$anon$1.run(SocketInputDStream.scala:72) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+13:28:31.435 [receiver-supervisor-future-0] WARN  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Restarting receiver with delay 2000 ms: Error receiving data
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_452]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_452]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_452]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_452]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) ~[?:1.8.0_452]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) ~[?:1.8.0_452]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) ~[?:1.8.0_452]
+	at java.io.InputStreamReader.read(InputStreamReader.java:184) ~[?:1.8.0_452]
+	at java.io.BufferedReader.fill(BufferedReader.java:161) ~[?:1.8.0_452]
+	at java.io.BufferedReader.readLine(BufferedReader.java:324) ~[?:1.8.0_452]
+	at java.io.BufferedReader.readLine(BufferedReader.java:389) ~[?:1.8.0_452]
+	at org.apache.spark.streaming.dstream.SocketReceiver$$anon$2.getNext(SocketInputDStream.scala:121) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.streaming.dstream.SocketReceiver$$anon$2.getNext(SocketInputDStream.scala:119) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:73) ~[spark-core_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.streaming.dstream.SocketReceiver.receive(SocketInputDStream.scala:91) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+	at org.apache.spark.streaming.dstream.SocketReceiver$$anon$1.run(SocketInputDStream.scala:72) ~[spark-streaming_2.12-3.3.1.jar:3.3.1]
+13:28:31.435 [receiver-supervisor-future-0] INFO  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Stopping receiver with message: Restarting receiver with delay 2000ms: Error receiving data: java.net.SocketException: Socket closed
+13:28:31.435 [receiver-supervisor-future-0] WARN  org.apache.spark.streaming.receiver.ReceiverSupervisorImpl - Receiver has been stopped

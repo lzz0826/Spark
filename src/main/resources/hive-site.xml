@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+    <!-- Hive 保存元數據到 MySQL，需要指定 MySQL 的連線 URL -->
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://127.0.0.1:3306/metastore?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;allowPublicKeyRetrieval=true</value>
+    </property>
+
+    <!-- Hive 使用的 JDBC 驅動類（這裡用 MySQL 8 的新版驅動） -->
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.cj.jdbc.Driver</value>
+    </property>
+
+    <property>
+        <name>hive.execution.engine</name>
+        <value>mr</value>
+    </property>
+
+    <!-- 連線 MySQL 的使用者帳號 -->
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>root</value>
+    </property>
+
+    <!-- 連線 MySQL 的密碼 -->
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>rootpass</value>
+    </property>
+
+    <!-- Hive 數據倉庫（warehouse）的路徑，指定存放 Hive 表數據的目錄，這裡放在 HDFS 上 -->
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>hdfs://127.0.0.1:8020/user/hive/warehouse</value>
+    </property>
+
+    <property>
+        <name>dfs.datanode.hostname</name>
+        <value>datanode01</value>
+    </property>
+
+    <property>
+        <name>dfs.datanode.address</name>
+        <value>127.0.0.1:9866</value>   <!-- 這才是 DataNode 對應 port -->
+    </property>
+
+<!--    <property>-->
+<!--        <name>dfs.datanode.http.address</name>-->
+<!--        <value>127.0.0.1:9864</value>   &lt;!&ndash; WebHDFS port &ndash;&gt;-->
+<!--    </property>-->
+
+    <property>
+        <name>dfs.clientuse.datanode.hostname</name>
+        <value>true</value>
+    </property>
+
+    <!-- 是否檢查 Hive 元數據庫的 schema 與 Hive 軟體版本是否一致
+         設為 false 表示不檢查（方便開發環境使用） -->
+    <property>
+        <name>hive.metastore.schema.verification</name>
+        <value>false</value>
+    </property>
+
+    <!-- HiveServer2 的 Thrift 服務端口，默認 10000 -->
+    <property>
+        <name>hive.server2.thrift.port</name>
+        <value>10000</value>
+    </property>
+
+    <!-- HiveServer2 綁定的主機地址（這裡綁定本機 127.0.0.1） -->
+    <property>
+        <name>hive.server2.thrift.bind.host</name>
+        <value>127.0.0.1</value>
+    </property>
+
+    <!-- 是否開啟 metastore 事件 API 的驗證，false 表示禁用 -->
+    <property>
+        <name>hive.metastore.event.db.notification.api.auth</name>
+        <value>false</value>
+    </property>
+
+    <!-- 在 CLI 輸出結果時，是否輸出表頭（列名），true = 顯示 -->
+    <property>
+        <name>hive.cli.print.header</name>
+        <value>true</value>
+    </property>
+
+    <!-- 在 CLI 中是否顯示當前使用的資料庫名稱，true = 顯示 -->
+    <property>
+        <name>hive.cli.print.current.db</name>
+        <value>true</value>
+    </property>
+
+    <!-- 自動建立 schema（MySQL 裡的表結構）
+         設為 true，Hive 在第一次啟動時會自動在 MySQL 建立 metastore 所需的表 -->
+    <property>
+        <name>datanucleus.schema.autoCreateAll</name>
+        <value>true</value>
+    </property>
+
+</configuration>
